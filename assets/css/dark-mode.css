@@ -3,20 +3,20 @@
    Ghost's inline :root overrides (specificity 0,1,0) */
 
 html[data-theme="dark"] {
-    --epcl-background-color:       #1a1714 !important;
-    --epcl-secondary-color:        #201e1b !important;
-    --epcl-boxes-background-color: #272320 !important;
-    --epcl-editor-boxes-bg-color:  #272320 !important;
-    --epcl-titles-color:           #f0ebe4 !important;
-    --epcl-black:                  #f0ebe4 !important;
-    --epcl-text-color:             #c0b8b0 !important;
-    --epcl-border-color:           #3d3830 !important;
+    --epcl-background-color:       #15171a !important;
+    --epcl-secondary-color:        #1c1e21 !important;
+    --epcl-boxes-background-color: #22252a !important;
+    --epcl-editor-boxes-bg-color:  #22252a !important;
+    --epcl-titles-color:           #f0f0f0 !important;
+    --epcl-black:                  #f0f0f0 !important;
+    --epcl-text-color:             #b8bcc2 !important;
+    --epcl-border-color:           #333740 !important;
 }
 
 /* ── Force body background & text (in case variable doesn't cascade) */
 html[data-theme="dark"] body {
-    background-color: #1a1714 !important;
-    color: #c0b8b0 !important;
+    background-color: #15171a !important;
+    color: #b8bcc2 !important;
 }
 
 /* ── Headings ─────────────────────────────────────── */
@@ -27,66 +27,66 @@ html[data-theme="dark"] h4,
 html[data-theme="dark"] h5,
 html[data-theme="dark"] h6,
 html[data-theme="dark"] .title {
-    color: #f0ebe4;
+    color: #f0f0f0;
 }
 
 /* ── Navigation ──────────────────────────────────── */
 html[data-theme="dark"] .main-nav ul.sub-menu {
-    background: #272320;
-    border-color: #3d3830;
+    background: #22252a;
+    border-color: #333740;
 }
 
 html[data-theme="dark"] nav.mobile.main-nav {
-    background: #201e1b;
+    background: #1c1e21;
 }
 
 html[data-theme="dark"] .main-nav a,
 html[data-theme="dark"] nav.mobile a {
-    color: #c0b8b0;
+    color: #b8bcc2;
 }
 
 /* ── Code & pre blocks ───────────────────────────── */
 html[data-theme="dark"] div.text pre:not([class*=language-]),
 html[data-theme="dark"] div.text code:not([class*=language-]) {
-    background-color: #0f0d0b !important;
-    color: #c0b8b0;
-    border-color: #3d3830;
+    background-color: #101114 !important;
+    color: #b8bcc2;
+    border-color: #333740;
 }
 
 /* ── Tables ──────────────────────────────────────── */
 html[data-theme="dark"] div.text table {
-    background: #272320 !important;
-    color: #c0b8b0;
+    background: #22252a !important;
+    color: #b8bcc2;
 }
 
 html[data-theme="dark"] div.text table th,
 html[data-theme="dark"] div.text table td {
-    border-color: #3d3830;
-    color: #c0b8b0;
+    border-color: #333740;
+    color: #b8bcc2;
 }
 
 html[data-theme="dark"] div.text table th {
-    background: #302c28;
+    background: #2a2d32;
 }
 
 /* ── Product cards ───────────────────────────────── */
 html[data-theme="dark"] .kg-product-card .kg-product-card-container,
 html[data-theme="dark"] div.text .kg-product-card {
-    background: #272320 !important;
-    border-color: #3d3830;
+    background: #22252a !important;
+    border-color: #333740;
 }
 
 /* ── Select dropdowns ────────────────────────────── */
 html[data-theme="dark"] select option {
-    background: #272320;
-    color: #c0b8b0;
+    background: #22252a;
+    color: #b8bcc2;
 }
 
 html[data-theme="dark"] select,
 html[data-theme="dark"] .widget select {
-    background-color: #302c28 !important;
-    color: #c0b8b0;
-    border-color: #3d3830;
+    background-color: #2a2d32 !important;
+    color: #b8bcc2;
+    border-color: #333740;
 }
 
 /* ── Form inputs ─────────────────────────────────── */
@@ -95,37 +95,37 @@ html[data-theme="dark"] input[type="email"],
 html[data-theme="dark"] input[type="password"],
 html[data-theme="dark"] input[type="url"],
 html[data-theme="dark"] textarea {
-    background: #302c28;
-    border-color: #3d3830;
-    color: #c0b8b0;
+    background: #2a2d32;
+    border-color: #333740;
+    color: #b8bcc2;
 }
 
 html[data-theme="dark"] input[type="text"]:focus,
 html[data-theme="dark"] input[type="email"]:focus,
 html[data-theme="dark"] input[type="url"]:focus,
 html[data-theme="dark"] textarea:focus {
-    background: #362f2a;
-    border-color: #5a524a;
+    background: #30343b;
+    border-color: #464c56;
 }
 
 /* ── .bg-white utility override ──────────────────── */
 html[data-theme="dark"] .bg-white {
-    background: #272320 !important;
+    background: #22252a !important;
 }
 
 /* ── Footer ──────────────────────────────────────── */
 html[data-theme="dark"] #footer {
-    border-color: #3d3830;
-    color: #c0b8b0;
+    border-color: #333740;
+    color: #b8bcc2;
 }
 
 html[data-theme="dark"] #footer a {
-    color: #c0b8b0;
+    color: #b8bcc2;
 }
 
 /* ── SVG icons ───────────────────────────────────── */
 html[data-theme="dark"] svg.icon {
-    fill: #c0b8b0;
+    fill: #b8bcc2;
 }
 
 /* Search icon circle is stroke-only — undo the inherited fill */
@@ -135,7 +135,7 @@ html[data-theme="dark"] .epcl-search-button svg circle {
 
 /* ── Horizontal rules ────────────────────────────── */
 html[data-theme="dark"] hr {
-    border-color: #3d3830;
+    border-color: #333740;
 }
 
 /* ── Mobile menu overlay ─────────────────────────── */
@@ -145,9 +145,9 @@ html[data-theme="dark"] .menu-overlay {
 
 /* ── Tags ────────────────────────────────────────── */
 html[data-theme="dark"] .tags a {
-    background-color: #302c28;
-    color: #c0b8b0;
-    border-color: #3d3830;
+    background-color: #2a2d32;
+    color: #b8bcc2;
+    border-color: #333740;
 }
 
 /* ── Toggle button ───────────────────────────────── */
