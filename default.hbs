@@ -8,6 +8,9 @@
 
     {{ghost_head}}
 
+    {{!-- Dark mode — loads last to override Ghost's inline :root styles --}}
+    <link href="{{asset 'css/dark-mode.css' }}" type="text/css" rel="stylesheet">
+
 </head>
 <body class="{{#if @site.cover_image}}cover{{/if}} {{body_class}}" {{#if @site.cover_image}}style="background: url({{@site.cover_image}}) no-repeat center center fixed;"{{/if}}>
     
@@ -56,6 +59,7 @@
 
     {{!-- Theme Scripts --}}
     <script defer src="{{asset 'dist/scripts.min.js' }}"></script>
+    <script defer src="{{asset 'js/dark-mode.js' }}"></script>
 
 
 </body>

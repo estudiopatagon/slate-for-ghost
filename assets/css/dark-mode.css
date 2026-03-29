@@ -1,0 +1,210 @@
+/* Dark mode — Slate theme
+   Uses html[data-theme="dark"] (specificity 0,1,1) to beat
+   Ghost's inline :root overrides (specificity 0,1,0) */
+
+html[data-theme="dark"] {
+    --epcl-background-color:       #1a1714 !important;
+    --epcl-secondary-color:        #201e1b !important;
+    --epcl-boxes-background-color: #272320 !important;
+    --epcl-editor-boxes-bg-color:  #272320 !important;
+    --epcl-titles-color:           #f0ebe4 !important;
+    --epcl-black:                  #f0ebe4 !important;
+    --epcl-text-color:             #c0b8b0 !important;
+    --epcl-border-color:           #3d3830 !important;
+}
+
+/* ── Force body background & text (in case variable doesn't cascade) */
+html[data-theme="dark"] body {
+    background-color: #1a1714 !important;
+    color: #c0b8b0 !important;
+}
+
+/* ── Headings ─────────────────────────────────────── */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .title {
+    color: #f0ebe4;
+}
+
+/* ── Navigation ──────────────────────────────────── */
+html[data-theme="dark"] .main-nav ul.sub-menu {
+    background: #272320;
+    border-color: #3d3830;
+}
+
+html[data-theme="dark"] nav.mobile.main-nav {
+    background: #201e1b;
+}
+
+html[data-theme="dark"] .main-nav a,
+html[data-theme="dark"] nav.mobile a {
+    color: #c0b8b0;
+}
+
+/* ── Code & pre blocks ───────────────────────────── */
+html[data-theme="dark"] div.text pre:not([class*=language-]),
+html[data-theme="dark"] div.text code:not([class*=language-]) {
+    background-color: #0f0d0b !important;
+    color: #c0b8b0;
+    border-color: #3d3830;
+}
+
+/* ── Tables ──────────────────────────────────────── */
+html[data-theme="dark"] div.text table {
+    background: #272320 !important;
+    color: #c0b8b0;
+}
+
+html[data-theme="dark"] div.text table th,
+html[data-theme="dark"] div.text table td {
+    border-color: #3d3830;
+    color: #c0b8b0;
+}
+
+html[data-theme="dark"] div.text table th {
+    background: #302c28;
+}
+
+/* ── Product cards ───────────────────────────────── */
+html[data-theme="dark"] .kg-product-card .kg-product-card-container,
+html[data-theme="dark"] div.text .kg-product-card {
+    background: #272320 !important;
+    border-color: #3d3830;
+}
+
+/* ── Select dropdowns ────────────────────────────── */
+html[data-theme="dark"] select option {
+    background: #272320;
+    color: #c0b8b0;
+}
+
+html[data-theme="dark"] select,
+html[data-theme="dark"] .widget select {
+    background-color: #302c28 !important;
+    color: #c0b8b0;
+    border-color: #3d3830;
+}
+
+/* ── Form inputs ─────────────────────────────────── */
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] input[type="password"],
+html[data-theme="dark"] input[type="url"],
+html[data-theme="dark"] textarea {
+    background: #302c28;
+    border-color: #3d3830;
+    color: #c0b8b0;
+}
+
+html[data-theme="dark"] input[type="text"]:focus,
+html[data-theme="dark"] input[type="email"]:focus,
+html[data-theme="dark"] input[type="url"]:focus,
+html[data-theme="dark"] textarea:focus {
+    background: #362f2a;
+    border-color: #5a524a;
+}
+
+/* ── .bg-white utility override ──────────────────── */
+html[data-theme="dark"] .bg-white {
+    background: #272320 !important;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+html[data-theme="dark"] #footer {
+    border-color: #3d3830;
+    color: #c0b8b0;
+}
+
+html[data-theme="dark"] #footer a {
+    color: #c0b8b0;
+}
+
+/* ── SVG icons ───────────────────────────────────── */
+html[data-theme="dark"] svg.icon {
+    fill: #c0b8b0;
+}
+
+/* Search icon circle is stroke-only — undo the inherited fill */
+html[data-theme="dark"] .epcl-search-button svg circle {
+    fill: none;
+}
+
+/* ── Horizontal rules ────────────────────────────── */
+html[data-theme="dark"] hr {
+    border-color: #3d3830;
+}
+
+/* ── Mobile menu overlay ─────────────────────────── */
+html[data-theme="dark"] .menu-overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* ── Tags ────────────────────────────────────────── */
+html[data-theme="dark"] .tags a {
+    background-color: #302c28;
+    color: #c0b8b0;
+    border-color: #3d3830;
+}
+
+/* ── Toggle button ───────────────────────────────── */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    color: var(--epcl-text-color, #4e4e57);
+    transition: color 300ms ease;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    color: var(--epcl-main-color, var(--ghost-accent-color));
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ── Responsive: match search button positioning ─── */
+@media screen and (max-width: 1200px) {
+    #header .theme-toggle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 90px;
+        width: 40px;
+        height: 40px;
+        z-index: 100;
+    }
+
+    #header .theme-toggle svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    #header .theme-toggle:hover {
+        color: inherit;
+    }
+}
+
+/* Show sun in light mode, moon in dark mode */
+.theme-toggle .icon-sun  { display: block; }
+.theme-toggle .icon-moon { display: none; }
+
+html[data-theme="dark"] .theme-toggle .icon-sun  { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }

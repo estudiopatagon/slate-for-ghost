@@ -10,6 +10,11 @@
 {{! Styles'n'Scripts }}
 <link rel="shortcut icon" href="{{asset 'favicon.ico' }}">
 
+{{! Dark mode — must run before paint to prevent flash }}
+<script>
+(function(){var t=localStorage.getItem('epcl-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+</script>
+
 {{! Theme Styles }}
 
 <link href="{{asset 'dist/style.min.css' }}" type="text/css" rel="stylesheet">
